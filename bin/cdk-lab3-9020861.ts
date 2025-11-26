@@ -1,20 +1,12 @@
 #!/usr/bin/env node
-import * as cdk from 'aws-cdk-lib/core';
-import { CdkLab39020861Stack } from '../lib/cdk-lab3-9020861-stack';
+import * as cdk from 'aws-cdk-lib';
+import { Lab3Infra9020861Stack } from '../lib/lab3-infra-9020861-stack';
 
 const app = new cdk.App();
-new CdkLab39020861Stack(app, 'CdkLab39020861Stack', {
-  /* If you don't specify 'env', this stack will be environment-agnostic.
-   * Account/Region-dependent features and context lookups will not work,
-   * but a single synthesized template can be deployed anywhere. */
 
-  /* Uncomment the next line to specialize this stack for the AWS Account
-   * and Region that are implied by the current CLI configuration. */
-  // env: { account: process.env.CDK_DEFAULT_ACCOUNT, region: process.env.CDK_DEFAULT_REGION },
-
-  /* Uncomment the next line if you know exactly what Account and Region you
-   * want to deploy the stack to. */
-  // env: { account: '123456789012', region: 'us-east-1' },
-
-  /* For more information, see https://docs.aws.amazon.com/cdk/latest/guide/environments.html */
+new Lab3Infra9020861Stack(app, 'Lab3Infra9020861Stack', {
+  env: {
+    account: process.env.CDK_DEFAULT_ACCOUNT,
+    region: process.env.CDK_DEFAULT_REGION,
+  },
 });
