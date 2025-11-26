@@ -19,8 +19,9 @@ export class Lab3Infra9020861Stack extends Stack {
     const bucket = new s3.Bucket(this, 'Lab3Bucket9020861', {
       bucketName: 'vk-9020861-lab3-bucket', // must be globally unique; if deploy fails, adjust name
       removalPolicy: RemovalPolicy.DESTROY, // dev/test only
-      autoDeleteObjects: true,
-    });
+    // autoDeleteObjects removed: pipeline uses plain CloudFormation deploy
+});
+
 
     // 2) Lambda function
     const helloLambda = new lambda.Function(this, 'HelloLambda9020861', {
