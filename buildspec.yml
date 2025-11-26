@@ -1,0 +1,15 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - npm install -g aws-cdk
+      - npm install
+  build:
+    commands:
+      - echo "Synthesizing Lab3Infra9020861Stack for student 9020861..."
+      - cdk synth Lab3Infra9020861Stack
+
+artifacts:
+  files:
+    - 'cdk.out/Lab3Infra9020861Stack.template.json'
