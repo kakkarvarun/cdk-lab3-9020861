@@ -36,7 +36,7 @@ export class Lab3Infra9020861Stack extends Stack {
             statusCode: 200,
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
-              message: "Hello from Lambda via API Gateway (Lab 3)!",
+              message: "Hello from Lambda via API Gateway (Lab 3) – updated version!",
               studentId: "9020861",
               bucketName: process.env.BUCKET_NAME,
               name,
